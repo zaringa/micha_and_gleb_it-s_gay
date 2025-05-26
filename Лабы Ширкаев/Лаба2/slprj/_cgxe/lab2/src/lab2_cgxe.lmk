@@ -1,0 +1,45 @@
+CC     = "A:\Loading\MathWorks MATLAB R2023a v9.14.0.2206163\MathWorks MATLAB R2023a v9.14.0.2206163\sys\lcc64\lcc64\bin\lcc64.exe"
+LD     = "A:\Loading\MathWorks MATLAB R2023a v9.14.0.2206163\MathWorks MATLAB R2023a v9.14.0.2206163\sys\lcc64\lcc64\bin\lcclnk64.exe"
+LIBCMD = "A:\Loading\MathWorks MATLAB R2023a v9.14.0.2206163\MathWorks MATLAB R2023a v9.14.0.2206163\sys\lcc64\lcc64\bin\lcclib64.exe"
+CFLAGS = -w -dll -noregistrylookup  -c -Zp8 -DLCC_WIN64 -DMATLAB_MEX_FILE -nodeclspec
+LDFLAGS = -s -dll -L"A:\Loading\MathWorks MATLAB R2023a v9.14.0.2206163\MathWorks MATLAB R2023a v9.14.0.2206163\sys\lcc64\lcc64\lib64" -entry LibMain -map sfun.map
+LIBFLAGS = 
+
+OBJECTS = \
+	"c_mexapi_version.obj"\
+	"lccstub.obj"\
+	"lab2_cgxe.obj"\
+	"m_kTXGcb5dYsHaz2DbMUZySC.obj"\
+	"lab2_cgxe_registry.obj"\
+	"lab2_cgxe.def"\
+	"A:\Loading\MathWorks MATLAB R2023a v9.14.0.2206163\MathWorks MATLAB R2023a v9.14.0.2206163\extern\lib\win64\microsoft\libmx.lib"\
+	"A:\Loading\MathWorks MATLAB R2023a v9.14.0.2206163\MathWorks MATLAB R2023a v9.14.0.2206163\extern\lib\win64\microsoft\libmex.lib"\
+	"A:\Loading\MathWorks MATLAB R2023a v9.14.0.2206163\MathWorks MATLAB R2023a v9.14.0.2206163\extern\lib\win64\microsoft\libmat.lib"\
+	"A:\Loading\MathWorks MATLAB R2023a v9.14.0.2206163\MathWorks MATLAB R2023a v9.14.0.2206163\extern\lib\win64\microsoft\libfixedpoint.lib"\
+	"A:\Loading\MathWorks MATLAB R2023a v9.14.0.2206163\MathWorks MATLAB R2023a v9.14.0.2206163\extern\lib\win64\microsoft\libut.lib"\
+	"A:\Loading\MathWorks MATLAB R2023a v9.14.0.2206163\MathWorks MATLAB R2023a v9.14.0.2206163\extern\lib\win64\microsoft\libmwmathutil.lib"\
+	"A:\Loading\MathWorks MATLAB R2023a v9.14.0.2206163\MathWorks MATLAB R2023a v9.14.0.2206163\extern\lib\win64\microsoft\libemlrt.lib"\
+	"A:\Loading\MathWorks MATLAB R2023a v9.14.0.2206163\MathWorks MATLAB R2023a v9.14.0.2206163\extern\lib\win64\microsoft\libmwcgxert.lib"\
+	"A:\Loading\MathWorks MATLAB R2023a v9.14.0.2206163\MathWorks MATLAB R2023a v9.14.0.2206163\extern\lib\win64\microsoft\libmwcgxeooprt.lib"\
+	"A:\Loading\MathWorks MATLAB R2023a v9.14.0.2206163\MathWorks MATLAB R2023a v9.14.0.2206163\extern\lib\win64\microsoft\libmwslexec_simbridge.lib"\
+	"A:\Loading\MathWorks MATLAB R2023a v9.14.0.2206163\MathWorks MATLAB R2023a v9.14.0.2206163\extern\lib\win64\microsoft\libmwslccrt.lib"\
+	"A:\Loading\MathWorks MATLAB R2023a v9.14.0.2206163\MathWorks MATLAB R2023a v9.14.0.2206163\extern\lib\win64\microsoft\libmwstringutil.lib"\
+	"A:\Loading\MathWorks MATLAB R2023a v9.14.0.2206163\MathWorks MATLAB R2023a v9.14.0.2206163\extern\lib\win64\microsoft\libcovrt.lib"\
+	"A:\Loading\MathWorks MATLAB R2023a v9.14.0.2206163\MathWorks MATLAB R2023a v9.14.0.2206163\extern\lib\win64\microsoft\libmwsl_sfcn_cov_bridge.lib"\
+	"A:\Loading\MathWorks MATLAB R2023a v9.14.0.2206163\MathWorks MATLAB R2023a v9.14.0.2206163\extern\lib\win64\microsoft\libmwdsp_halidesim.lib"\
+
+INCLUDE_PATH= -I"A:\Loading\MathWorks MATLAB R2023a v9.14.0.2206163\MathWorks MATLAB R2023a v9.14.0.2206163\extern\include"  -I"A:\Loading\MathWorks MATLAB R2023a v9.14.0.2206163\MathWorks MATLAB R2023a v9.14.0.2206163\simulink\include"  -I"A:\Loading\MathWorks MATLAB R2023a v9.14.0.2206163\MathWorks MATLAB R2023a v9.14.0.2206163\rtw\c\src"  -I"A:\ННГУ\8 семестр\измерения в ткс(ширкаев, пархачев)\Лаба2\slprj\_cgxe\lab2\src"  -I"A:\ННГУ\8 семестр\измерения в ткс(ширкаев, пархачев)\Лаба2"  -I"A:\ННГУ\8 семестр\Измерения в ТКС(Ширкаев, Пархачев)\Лаба2\slprj\_cprj"  -I"A:\Loading\MathWorks MATLAB R2023a v9.14.0.2206163\MathWorks MATLAB R2023a v9.14.0.2206163\sys\lcc64\lcc64\include64"  -I"A:\ННГУ\8 семестр\Измерения в ТКС(Ширкаев, Пархачев)\Лаба2\slprj\_cgxe\lab2\src"  -I"A:\ННГУ\8 семестр\Измерения в ТКС(Ширкаев, Пархачев)\Лаба2" 
+ 
+
+lab2_cgxe.mexw64 : $(MAKEFILE) $(OBJECTS)
+	$(LD) $(LDFLAGS) -o lab2_cgxe.mexw64 @lab2_cgxe.lmko
+c_mexapi_version.obj :	"A:\Loading\MathWorks MATLAB R2023a v9.14.0.2206163\MathWorks MATLAB R2023a v9.14.0.2206163\extern\version\c_mexapi_version.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "A:\Loading\MathWorks MATLAB R2023a v9.14.0.2206163\MathWorks MATLAB R2023a v9.14.0.2206163\extern\version\c_mexapi_version.c"
+lccstub.obj :	"A:\Loading\MathWorks MATLAB R2023a v9.14.0.2206163\MathWorks MATLAB R2023a v9.14.0.2206163\sys\lcc64\lcc64\mex\lccstub.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "A:\Loading\MathWorks MATLAB R2023a v9.14.0.2206163\MathWorks MATLAB R2023a v9.14.0.2206163\sys\lcc64\lcc64\mex\lccstub.c"
+lab2_cgxe.obj :	"lab2_cgxe.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "lab2_cgxe.c"
+m_kTXGcb5dYsHaz2DbMUZySC.obj :	"m_kTXGcb5dYsHaz2DbMUZySC.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "m_kTXGcb5dYsHaz2DbMUZySC.c"
+lab2_cgxe_registry.obj :	"lab2_cgxe_registry.c"
+	$(CC) $(CFLAGS) $(INCLUDE_PATH) "lab2_cgxe_registry.c"
